@@ -63,7 +63,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         
         titleLabel.text = title
         titleLabel.textColor = theme.darkTintColor
-        titleLabel.textAlignment = .center
+        titleLabel.textAlignment = .left
         titleLabel.setContentHuggingPriority(.required, for: .horizontal)
         
         let clippingView = UIView()
@@ -272,7 +272,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         
         longPress?.minimumPressDuration = 0.0
         
-        effectView.isHidden = false
+        effectView.isHidden = true
         
         if animated {
             UIView.animate(withDuration: 0.2, animations: {
