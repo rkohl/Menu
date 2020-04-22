@@ -110,8 +110,8 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
             
             make.centerX.equalTo(titleLabel.snp_centerXWithinMargins)
             make.height.equalTo(1.5)
-            make.width.equalTo(20)
-            make.bottom.equalToSuperview().inset(3)
+            make.width.equalTo(32)
+            make.bottom.equalToSuperview().inset(2.5)
         }
         
         longPress = UILongPressGestureRecognizer(target: self, action: #selector(longPressGesture(_:)))
