@@ -43,7 +43,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         case right
     }
     public var cornerRadius: CGFloat = 0.0
-    public var titleAlignment: NSTextAlignment = .left
+    public var titleAlignment: NSTextAlignment = .center
     public var contentAlignment = Alignment.right {
         didSet {
             if contentAlignment == .center {
@@ -104,12 +104,12 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
             make.centerY.equalToSuperview()
         }
         
-        gestureBarView.layer.cornerRadius = 1.0
+        gestureBarView.layer.cornerRadius = 1.5/2
         gestureBarView.snp.makeConstraints {
             make in
             
             make.centerX.equalTo(titleLabel.snp_centerXWithinMargins)
-            make.height.equalTo(2)
+            make.height.equalTo(1.5)
             make.width.equalTo(20)
             make.bottom.equalToSuperview().inset(3)
         }

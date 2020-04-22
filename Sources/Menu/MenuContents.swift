@@ -157,7 +157,7 @@ class MenuContents: UIView {
         }
     }
     
-    init(name: String, items: [MenuItem], theme: MenuTheme, maxHeight: CGFloat = 300, radius: CGFloat = 0.0) {
+    init(name: String, items: [MenuItem], theme: MenuTheme, maxHeight: CGFloat = 240, radius: CGFloat = 0.0) {
 
         let itemViews: [MenuViewType] = items.map {
             let item = $0.view
@@ -399,6 +399,7 @@ class MenuContents: UIView {
         titleLabel.font = theme.font
         titleLabel.textColor = theme.textColor
         effectView.effect = theme.blurEffect
+        effectView.backgroundColor = .clear
         tintView.backgroundColor = theme.backgroundTint
         
         shadowView.layer.shadowOpacity = theme.shadowOpacity
