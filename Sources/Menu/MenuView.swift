@@ -101,17 +101,17 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
             make in
             
             make.left.right.equalToSuperview().inset(12)
-            make.centerY.equalToSuperview().inset(-3)
+            make.centerY.equalToSuperview().inset(-6)
         }
         
-        gestureBarView.layer.cornerRadius = 1.7/2
+        gestureBarView.layer.cornerRadius = 1
         gestureBarView.snp.makeConstraints {
             make in
             
             make.centerX.equalTo(titleLabel.snp_centerXWithinMargins)
-            make.height.equalTo(1.7)
+            make.height.equalTo(2)
             make.width.equalTo(44)
-            make.bottom.equalToSuperview().inset(3)
+            make.bottom.equalToSuperview().inset(4)
         }
         
         longPress = UILongPressGestureRecognizer(target: self, action: #selector(longPressGesture(_:)))
