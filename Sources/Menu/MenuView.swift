@@ -42,6 +42,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         case center
         case right
     }
+    public var cornerRadius: CGFloat = 0.0
     
     public var contentAlignment = Alignment.right {
         didSet {
@@ -76,7 +77,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
             make.edges.equalToSuperview()
         }
         
-        clippingView.layer.cornerRadius = 8.0
+        clippingView.layer.cornerRadius = self.cornerRadius
         
         clippingView.addSubview(effectView)
         
@@ -134,7 +135,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
     }
     
     deinit {
-        NotificationCenter.default.removeObserver(menuPresentationObserver)
+        NotificationCenter.default.removeObserver(menuPresentationObserver as Any)
     }
     
     //MARK: - Required Init

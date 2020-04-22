@@ -27,6 +27,7 @@ public protocol MenuTheme {
     var shadowOpacity: Float { get }
     var shadowRadius: CGFloat { get }
     var separatorColor: UIColor { get }
+    var cornerRadius: CGFloat { get }
     
 }
 
@@ -45,6 +46,6 @@ public struct LightMenuTheme: MenuTheme {
     public let shadowOpacity: Float = 0.3
     public let shadowRadius: CGFloat = 7.0
     public let separatorColor = UIColor(white: 0, alpha: 0.1)
-    
+    public let cornerRadius: CGFloat = 0.0
     public init() {}
 }
