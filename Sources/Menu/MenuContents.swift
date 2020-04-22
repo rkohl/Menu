@@ -400,7 +400,7 @@ class MenuContents: UIView {
         titleLabel.textColor = theme.textColor
         effectView.effect = theme.blurEffect
         tintView.backgroundColor = theme.backgroundTint
-        radius = theme.cornerRadius
+        
         shadowView.layer.shadowOpacity = theme.shadowOpacity
         shadowView.layer.shadowRadius = theme.shadowRadius
         shadowView.layer.shadowColor = theme.shadowColor.cgColor
