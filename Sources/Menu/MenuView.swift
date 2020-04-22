@@ -101,7 +101,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
             make in
             
             make.left.right.equalToSuperview().inset(12)
-            make.centerY.equalToSuperview()
+            make.centerY.equalToSuperview().inset(-3)
         }
         
         gestureBarView.layer.cornerRadius = 1.7/2
