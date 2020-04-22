@@ -6,9 +6,14 @@ This repo contains much of the code detailed in my posts
 
 [The iOS menu](https://codea.io/blog/the-ios-menu/) and [Detailing the iOS menu](https://codea.io/blog/detailing-the-ios-menu/)
 
-Add it via CocoaPods with
+## Installation
+### Swift Package Manager
+To add KDGNetworking to a [Swift Package Manager](https://swift.org/package-manager/) based project, add:
 
-    pod 'Menu'
+```swift
+.package(url: "https://github.com/rkohl/Menu.git", .upToNextMajor(from: "1.0.0")),
+```
+to your `Package.swift` files `dependencies` array.
 
-If you like this or have questions, let me know [on twitter](https://twitter.com/twolivesleft)
+
 
