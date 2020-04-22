@@ -343,7 +343,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         gestureBarView.backgroundColor = theme.gestureBarTint
         tintView.backgroundColor = theme.backgroundTint
         effectView.effect = theme.blurEffect
-        
+        cornerRadius = theme.cornerRadius
         contents?.applyTheme(theme)
     }
     
