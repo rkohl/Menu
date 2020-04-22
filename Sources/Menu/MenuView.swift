@@ -43,7 +43,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         case right
     }
     public var cornerRadius: CGFloat = 0.0
-    
+    public var titleAlignment: NSTextAlignment = .left
     public var contentAlignment = Alignment.right {
         didSet {
             if contentAlignment == .center {
@@ -63,7 +63,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         
         titleLabel.text = title
         titleLabel.textColor = theme.darkTintColor
-        titleLabel.textAlignment = .left
+        titleLabel.textAlignment = self.titleAlignment
         titleLabel.setContentHuggingPriority(.required, for: .horizontal)
         
         let clippingView = UIView()

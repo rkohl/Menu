@@ -28,7 +28,7 @@ public protocol MenuTheme {
     var shadowRadius: CGFloat { get }
     var separatorColor: UIColor { get }
     var cornerRadius: CGFloat { get }
-    
+    var titleAlignment: NSTextAlignment { get }
 }
 
 public struct LightMenuTheme: MenuTheme {
@@ -47,5 +47,6 @@ public struct LightMenuTheme: MenuTheme {
     public let shadowRadius: CGFloat = 7.0
     public let separatorColor = UIColor(white: 0, alpha: 0.1)
     public let cornerRadius: CGFloat = 0.0
+    public let titleAlignment: NSTextAlignment = .left
     public init() {}
 }
