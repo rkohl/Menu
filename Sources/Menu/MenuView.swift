@@ -108,7 +108,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         gestureBarView.snp.makeConstraints {
             make in
             
-            make.centerX.equalToSuperview()
+            make.centerX.equalTo(titleLabel.center.x)
             make.height.equalTo(2)
             make.width.equalTo(20)
             make.bottom.equalToSuperview().inset(3)
