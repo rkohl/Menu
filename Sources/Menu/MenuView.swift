@@ -108,7 +108,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         gestureBarView.snp.makeConstraints {
             make in
             
-            make.centerX.equalTo(titleLabel.center.x)
+            make.centerX.equalTo(titleLabel.snp_centerXWithinMargins)
             make.height.equalTo(2)
             make.width.equalTo(20)
             make.bottom.equalToSuperview().inset(3)
@@ -272,7 +272,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         
         longPress?.minimumPressDuration = 0.0
         
-        effectView.isHidden = true
+        effectView.isHidden = false
         
         if animated {
             UIView.animate(withDuration: 0.2, animations: {
