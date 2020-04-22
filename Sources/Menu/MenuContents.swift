@@ -157,7 +157,7 @@ class MenuContents: UIView {
         }
     }
     
-    init(name: String, items: [MenuItem], theme: MenuTheme, maxHeight: CGFloat = 300, radius: CGFloat = 6.0) {
+    init(name: String, items: [MenuItem], theme: MenuTheme, maxHeight: CGFloat = 300, radius: CGFloat = 0.0) {
 
         let itemViews: [MenuViewType] = items.map {
             let item = $0.view
