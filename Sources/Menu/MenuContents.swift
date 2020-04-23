@@ -190,7 +190,7 @@ class MenuContents: UIView {
             make in
             
             make.top.bottom.equalToSuperview()
-            make.left.right.equalToSuperview().inset(16)
+            make.left.right.equalToSuperview().inset(-16)
             
         }
         
