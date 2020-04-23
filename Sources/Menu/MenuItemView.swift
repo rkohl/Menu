@@ -130,7 +130,7 @@ public class ShortcutMenuItemView: UIView, MenuItemView, MenuThemeable {
         nameLabel.snp.makeConstraints {
             make in
             
-            make.top.bottom.equalToSuperview().inset(4)
+            make.top.bottom.equalToSuperview().inset(6)
             make.left.equalToSuperview().offset(10)
             make.right.lessThanOrEqualToSuperview().offset(-10)
         }
@@ -147,7 +147,7 @@ public class ShortcutMenuItemView: UIView, MenuItemView, MenuThemeable {
             shortcutStack.snp.makeConstraints {
                 make in
                 
-                make.top.bottom.equalToSuperview().inset(2)
+                make.top.bottom.equalToSuperview().inset(3)
                 make.right.equalToSuperview().inset(6)
             }
             
@@ -227,7 +227,7 @@ public class ShortcutMenuItemView: UIView, MenuItemView, MenuThemeable {
     //MARK: - Themeable
     
     public func applyTheme(_ theme: MenuTheme) {
-        nameLabel.font = theme.font
+        nameLabel.font = theme.itemFont
         nameLabel.textColor = theme.textColor
         nameLabel.highlightedTextColor = theme.highlightedTextColor
         
@@ -236,7 +236,7 @@ public class ShortcutMenuItemView: UIView, MenuItemView, MenuThemeable {
         shortcutLabels.forEach {
             label in
             
-            label.font = theme.font
+            label.font = theme.itemFont
             label.textColor = theme.textColor
             label.highlightedTextColor = theme.highlightedTextColor
         }
