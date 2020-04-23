@@ -252,11 +252,11 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         }
         
         effectView.isHidden = true
-        
+     
         longPress?.minimumPressDuration = 0.05
         
         self.contents = contents
-        
+        tintView.backgroundColor = theme.backgroundTint
         setNeedsLayout()
         layoutIfNeeded()
         
@@ -282,6 +282,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         if animated {
             UIView.animate(withDuration: 0.2, animations: {
                 contentsView?.alpha = 0.0
+                tintView.backgroundColor = .clear
             }) {
                 finished in
                 contentsView?.removeFromSuperview()

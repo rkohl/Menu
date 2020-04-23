@@ -399,7 +399,7 @@ class MenuContents: UIView {
         titleLabel.font = theme.font
         titleLabel.textColor = theme.titleColor
         effectView.effect = theme.blurEffect
-        effectView.backgroundColor = .clear
+    //effectView.backgroundColor = .clear
         tintView.backgroundColor = theme.backgroundTint
         
         shadowView.layer.shadowOpacity = theme.shadowOpacity
