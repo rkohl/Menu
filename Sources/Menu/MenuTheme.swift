@@ -37,9 +37,9 @@ public struct LightMenuTheme: MenuTheme {
     
     public let font = UIFont.systemFont(ofSize: 16, weight: .medium)
     public let titleColor: UIColor = UIColor.label
-    public let textColor = UIColor.black
-    public let brightTintColor = UIColor.white
-    public let darkTintColor = UIColor.black
+    public let textColor = UIColor.label
+    public let brightTintColor = UIColor.label
+    public let darkTintColor = UIColor.label
     public let highlightedTextColor = UIColor.white
     public let highlightedBackgroundColor = UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1.0)
     public let backgroundTint = UIColor(white: 1.0, alpha: 0.15)
