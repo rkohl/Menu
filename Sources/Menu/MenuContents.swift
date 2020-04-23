@@ -157,7 +157,7 @@ class MenuContents: UIView {
         }
     }
     
-    init(name: String, items: [MenuItem], theme: MenuTheme, maxHeight: CGFloat = 240, radius: CGFloat = 0.0) {
+    init(name: String, items: [MenuItem], theme: MenuTheme, maxHeight: CGFloat = 200, radius: CGFloat = 0.0) {
 
         let itemViews: [MenuViewType] = items.map {
             let item = $0.view
@@ -250,7 +250,7 @@ class MenuContents: UIView {
         
         switch alignment {
         case .center:
-            localViewBounds = view.bounds.offsetBy(dx: bounds.size.width/2.0 - view.bounds.size.width/2.0, dy: 0.0)
+            localViewBounds = view.bounds.offsetBy(dx: (bounds.size.width/2.0 - view.bounds.size.width/2.0) - 40, dy: 0.0)
             lowerRectCorners = .allCorners
         case .right:
             localViewBounds = view.bounds
