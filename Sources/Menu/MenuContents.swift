@@ -177,7 +177,6 @@ class MenuContents: UIView {
         
         addSubview(shadowView)
         
-        
         shadowView.snp.makeConstraints {
             make in
             
@@ -189,16 +188,13 @@ class MenuContents: UIView {
         effectView.snp.makeConstraints {
             make in
             
-            make.top.bottom.equalToSuperview()
-            make.left.right.equalToSuperview().inset(-16)
-            
+            make.edges.equalToSuperview()
         }
         
         effectView.contentView.addSubview(tintView)
         effectView.contentView.addSubview(titleLabel)
         effectView.contentView.addSubview(scrollContainer)
-        effectView.effect = .none
-        effectView.backgroundColor = .clear
+        
         scrollContainer.addSubview(scrollView)
         scrollView.addSubview(stackView)
         
@@ -427,7 +423,6 @@ class MenuContents: UIView {
     
     func updateContentMask() {
         if let maskLayer = scrollContainer.layer.mask as? CAGradientLayer {
-            
             maskLayer.frame = bounds
             
             let height = bounds.size.height
