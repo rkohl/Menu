@@ -197,7 +197,8 @@ class MenuContents: UIView {
         effectView.contentView.addSubview(tintView)
         effectView.contentView.addSubview(titleLabel)
         effectView.contentView.addSubview(scrollContainer)
-        
+        effectView.effect = .none
+        effectView.backgroundColor = .clear
         scrollContainer.addSubview(scrollView)
         scrollView.addSubview(stackView)
         
