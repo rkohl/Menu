@@ -94,6 +94,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         effectView.contentView.addSubview(titleLabel)
         effectView.contentView.addSubview(gestureBarView)
         */
+        
         tintView.snp.makeConstraints {
             make in
             
@@ -129,7 +130,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         
         applyTheme(theme)
         effectView.effect = .none
-        
+        self.tintView.backgroundColor = .clear
         menuPresentationObserver = NotificationCenter.default.addObserver(forName: MenuView.menuWillPresent, object: nil, queue: nil) {
             [weak self] notification in
             
@@ -282,7 +283,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         if animated {
             UIView.animate(withDuration: 0.2, animations: {
                 contentsView?.alpha = 0.0
-                tintView.backgroundColor = .clear
+                self.tintView.backgroundColor = .clear
             }) {
                 finished in
                 contentsView?.removeFromSuperview()
