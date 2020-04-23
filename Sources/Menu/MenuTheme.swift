@@ -15,6 +15,7 @@ public protocol MenuThemeable {
 public protocol MenuTheme {
     
     var font: UIFont { get }
+    var titleColor: UIColor { get }
     var textColor: UIColor { get }
     var brightTintColor: UIColor { get }
     var darkTintColor: UIColor { get }
@@ -35,6 +36,7 @@ public protocol MenuTheme {
 public struct LightMenuTheme: MenuTheme {
     
     public let font = UIFont.systemFont(ofSize: 16, weight: .medium)
+    public let titleColor: UIColor = UIColor.label
     public let textColor = UIColor.black
     public let brightTintColor = UIColor.white
     public let darkTintColor = UIColor.black

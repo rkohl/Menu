@@ -62,7 +62,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         super.init(frame: .zero)
         
         titleLabel.text = title
-        titleLabel.textColor = theme.darkTintColor
+        titleLabel.textColor = theme.titleColor
         titleLabel.textAlignment = self.titleAlignment
         titleLabel.setContentHuggingPriority(.required, for: .horizontal)
         
@@ -124,7 +124,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         addGestureRecognizer(tapGesture)
         
         applyTheme(theme)
-        
+        effectView.effect = .none
         menuPresentationObserver = NotificationCenter.default.addObserver(forName: MenuView.menuWillPresent, object: nil, queue: nil) {
             [weak self] notification in
             
@@ -339,7 +339,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         self.theme = theme
         
         titleLabel.font = theme.font
-        titleLabel.textColor = theme.darkTintColor
+        titleLabel.textColor = theme.titleColor
         gestureBarView.backgroundColor = theme.gestureBarTint
         tintView.backgroundColor = theme.backgroundTint
         effectView.effect = theme.blurEffect
