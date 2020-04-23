@@ -16,6 +16,7 @@ public protocol MenuTheme {
     
     var font: UIFont { get }
     var titleColor: UIColor { get }
+    var titleFocusColor: UIColor { get }
     var textColor: UIColor { get }
     var brightTintColor: UIColor { get }
     var darkTintColor: UIColor { get }
@@ -37,6 +38,7 @@ public struct LightMenuTheme: MenuTheme {
     
     public let font = UIFont.systemFont(ofSize: 16, weight: .medium)
     public let titleColor: UIColor = UIColor.label
+    public let titleFocusColor: UIColor = UIColor.white
     public let textColor = UIColor.label
     public let brightTintColor = UIColor.label
     public let darkTintColor = UIColor.label

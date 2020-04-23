@@ -253,7 +253,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         }
         
         effectView.isHidden = true
-     
+        titleLabel.textColor = theme.titleFocusColor
         longPress?.minimumPressDuration = 0.05
         
         self.contents = contents
@@ -284,6 +284,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
             UIView.animate(withDuration: 0.2, animations: {
                 contentsView?.alpha = 0.0
                 self.tintView.backgroundColor = .clear
+                self.titleLabel.textColor = self.theme.titleColor
             }) {
                 finished in
                 contentsView?.removeFromSuperview()
