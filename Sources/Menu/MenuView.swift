@@ -62,7 +62,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         super.init(frame: .zero)
         
         titleLabel.text = title
-        titleLabel.textColor = theme.titleColor
+        titleLabel.textColor = .label
         titleLabel.textAlignment = self.titleAlignment
         titleLabel.setContentHuggingPriority(.required, for: .horizontal)
         
@@ -79,9 +79,12 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         
         clippingView.layer.cornerRadius = self.cornerRadius
         
-        clippingView.addSubview(effectView)
+        clippingView.addSubview(tintView)
+        clippingView.addSubview(titleLabel)
+        clippingView.addSubview(gestureBarView)
+        //clippingView.addSubview(effectView)
         
-        effectView.snp.makeConstraints {
+        /*effectView.snp.makeConstraints {
             make in
             
             make.edges.equalToSuperview()
@@ -90,7 +93,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         effectView.contentView.addSubview(tintView)
         effectView.contentView.addSubview(titleLabel)
         effectView.contentView.addSubview(gestureBarView)
-        
+        */
         tintView.snp.makeConstraints {
             make in
             
@@ -125,6 +128,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         
         applyTheme(theme)
         effectView.effect = .none
+        
         menuPresentationObserver = NotificationCenter.default.addObserver(forName: MenuView.menuWillPresent, object: nil, queue: nil) {
             [weak self] notification in
             

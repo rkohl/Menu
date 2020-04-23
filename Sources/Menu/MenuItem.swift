@@ -56,7 +56,7 @@ public extension UIKeyModifierFlags {
 }
 
 public struct ShortcutMenuItem: Equatable, MenuItem {
-    public static var displayShortcuts: Bool = true
+    public static var displayShortcuts: Bool = false
     
     public struct Shortcut: Equatable {
         public let modifiers: UIKeyModifierFlags
