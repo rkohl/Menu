@@ -177,6 +177,7 @@ class MenuContents: UIView {
         
         addSubview(shadowView)
         
+        
         shadowView.snp.makeConstraints {
             make in
             
@@ -188,7 +189,9 @@ class MenuContents: UIView {
         effectView.snp.makeConstraints {
             make in
             
-            make.edges.equalToSuperview()
+            make.top.bottom.equalToSuperview()
+            make.left.right.equalToSuperview().inset(16)
+            
         }
         
         effectView.contentView.addSubview(tintView)
@@ -329,7 +332,7 @@ class MenuContents: UIView {
         scrollView.snp.remakeConstraints {
             make in
             
-            make.width.greaterThanOrEqualTo(superview.snp.width).offset(100/2)
+            make.width.greaterThanOrEqualTo(superview.snp.width).offset(100)
             make.bottom.equalToSuperview()
             make.height.equalTo(stackView).offset(insetAdjustment).priority(.low)
             make.height.lessThanOrEqualTo(maxHeight).priority(.required)
@@ -425,7 +428,7 @@ class MenuContents: UIView {
         if let maskLayer = scrollContainer.layer.mask as? CAGradientLayer {
             
             maskLayer.frame = bounds
-            maskLayer.frame.size.width = bounds.size.width/2
+            
             let height = bounds.size.height
             let stop2 = 12 / height
             
