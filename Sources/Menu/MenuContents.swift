@@ -250,7 +250,7 @@ class MenuContents: UIView {
         
         switch alignment {
         case .center:
-            localViewBounds = view.bounds.offsetBy(dx: (bounds.size.width/2.0 - view.bounds.size.width/2.0) - 40, dy: 0.0)
+            localViewBounds = view.bounds.offsetBy(dx: bounds.size.width/2.0 - view.bounds.size.width/2.0, dy: 0.0)
             lowerRectCorners = .allCorners
         case .right:
             localViewBounds = view.bounds
@@ -329,7 +329,7 @@ class MenuContents: UIView {
         scrollView.snp.remakeConstraints {
             make in
             
-            make.width.greaterThanOrEqualTo(superview.snp.width).offset(100)
+            make.width.greaterThanOrEqualTo(superview.snp.width).offset(100/2)
             make.bottom.equalToSuperview()
             make.height.equalTo(stackView).offset(insetAdjustment).priority(.low)
             make.height.lessThanOrEqualTo(maxHeight).priority(.required)
@@ -423,8 +423,9 @@ class MenuContents: UIView {
     
     func updateContentMask() {
         if let maskLayer = scrollContainer.layer.mask as? CAGradientLayer {
-            maskLayer.frame = bounds
             
+            maskLayer.frame = bounds
+            maskLayer.frame.size.width = bounds.size.width/2
             let height = bounds.size.height
             let stop2 = 12 / height
             
