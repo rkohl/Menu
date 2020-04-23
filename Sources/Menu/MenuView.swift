@@ -62,7 +62,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         super.init(frame: .zero)
         
         titleLabel.text = title
-        titleLabel.textColor = .label
+        titleLabel.textColor = self.theme.titleColor
         titleLabel.textAlignment = self.titleAlignment
         titleLabel.setContentHuggingPriority(.required, for: .horizontal)
         
@@ -77,7 +77,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
             make.edges.equalToSuperview()
         }
         
-        clippingView.layer.cornerRadius = self.cornerRadius
+        clippingView.layer.cornerRadius = self.theme.cornerRadius
         
         clippingView.addSubview(tintView)
         clippingView.addSubview(titleLabel)
@@ -103,7 +103,8 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         titleLabel.snp.makeConstraints {
             make in
             
-            make.left.right.greaterThanOrEqualToSuperview().inset(12)
+            //make.left.right.greaterThanOrEqualToSuperview().inset(12)
+            make.centerX.equalToSuperview()
             make.centerY.equalToSuperview().inset(-8)
         }
         
@@ -111,9 +112,9 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         gestureBarView.snp.makeConstraints {
             make in
             
-            make.centerX.equalTo(titleLabel.snp_centerXWithinMargins)
+            make.centerX.equalToSuperview()
             make.height.equalTo(2.0)
-            make.width.equalTo(titleLabel.frame.size.width + 4)
+            make.width.equalTo(titleLabel.snp.width)
             make.top.equalTo(titleLabel.snp.bottom).offset(4)
         }
         
