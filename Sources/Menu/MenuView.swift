@@ -42,7 +42,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         case center
         case right
     }
-    public var cornerRadius: CGFloat = 0.0
+    public var cornerRadius: CGFloat = 8.0
     public var titleAlignment: NSTextAlignment = .center
     public var contentAlignment = Alignment.right {
         didSet {
@@ -253,7 +253,7 @@ public class MenuView: UIView, MenuThemeable, UIGestureRecognizerDelegate {
         
         effectView.isHidden = true
         
-        longPress?.minimumPressDuration = 0.07
+        longPress?.minimumPressDuration = 0.05
         
         self.contents = contents
         
