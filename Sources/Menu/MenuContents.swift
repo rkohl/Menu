@@ -397,7 +397,7 @@ class MenuContents: UIView {
     
     func applyTheme(_ theme: MenuTheme) {
         titleLabel.font = theme.font
-        titleLabel.textColor = theme.titleColor
+        titleLabel.textColor = theme.titleFocusColor
         effectView.effect = theme.blurEffect
     //effectView.backgroundColor = .clear
         tintView.backgroundColor = theme.backgroundTint
